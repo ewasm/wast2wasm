@@ -1,7 +1,7 @@
 {
   "name": "wast2wasm",
   "version": "0.0.0",
-  "description": "the wast2wasm function from wabt as a nodejs module",
+  "description": "converts wast files -> wasm",
   "main": "index.js",
   "scripts": {
     "build": "node ./build.js"
