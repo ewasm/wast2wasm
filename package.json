@@ -11,6 +11,12 @@
   "devDependencies": {
     "fs-extra": "^1.0.0"
   },
+  "keywords": [
+    "wast",
+    "wasm",
+    "WebAssembly",
+    "webassembly"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ewasm/wast2wasm.git"
