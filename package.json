@@ -1,0 +1,22 @@
+{
+  "name": "wast2wasm",
+  "version": "0.0.0",
+  "description": "the wast2wasm function from wabt as a nodejs module",
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./build.js"
+  },
+  "author": "mjbecze <mjbecze@gmail.com>",
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "fs-extra": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ewasm/wast2wasm.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ewasm/wast2wasm/issues"
+  },
+  "homepage": "https://github.com/ewasm/wast2wasm"
+}
