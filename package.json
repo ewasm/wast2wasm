@@ -9,7 +9,7 @@
   "author": "mjbecze <mjbecze@gmail.com>",
   "license": "MPL-2.0",
   "devDependencies": {
-    "fs-extra": "^2.1.2"
+    "fs-extra": "^3.0.1"
   },
   "keywords": [
     "wast",
