@@ -1,4 +1,6 @@
 # SYNOPSIS 
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/ewasm/wast2wasm.svg)](https://greenkeeper.io/)
 Translates from [s-expressions](https://github.com/WebAssembly/spec) to the WebAssembly [binary-encoding](https://github.com/WebAssembly/design/blob/master/BinaryEncoding.md). It wraps wabt's [wast2wasm](https://github.com/WebAssembly/wabt)
 
 # INSTALL
