@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - "7"
+env:
+  matrix:
+    - TEST_SUITE=test
+script: npm run $TEST_SUITE
