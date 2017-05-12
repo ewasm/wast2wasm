@@ -1,4 +1,6 @@
 # SYNOPSIS 
+[![NPM Package](https://img.shields.io/npm/v/wast2wasm.svg?style=flat-square)](https://www.npmjs.org/package/wast2wasm)
+[![Build Status](https://img.shields.io/travis/ewasm/wast2wasm.svg?branch=master&style=flat-square)](https://travis-ci.org/ewasm/wast2wasm)
 Translates from [s-expressions](https://github.com/WebAssembly/spec) to the WebAssembly [binary-encoding](https://github.com/WebAssembly/design/blob/master/BinaryEncoding.md). It wraps wabt's [wast2wasm](https://github.com/WebAssembly/wabt)
 
 # INSTALL
