@@ -1,6 +1,6 @@
 {
   "name": "wast2wasm",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "converts wast files -> wasm",
   "main": "index.js",
   "scripts": {
