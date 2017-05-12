@@ -1,4 +1,4 @@
-let wasm = require('./src/libwasm.js').wasm
+const wasm = require('./src/libwabt.js').wasm
 
 /**
  * Translates from [s-expressions](https://github.com/WebAssembly/spec) to the WebAssembly [binary-encoding](https://github.com/WebAssembly/design/blob/master/BinaryEncoding.md)
@@ -7,16 +7,11 @@ let wasm = require('./src/libwasm.js').wasm
  * @return {Promise} which resolves an object with the property `buffer` for
  * for the compiled binary and `log` for the log
  */
-module.exports = function (text, log = false) {
+module.exports = (text, log = false) => {
   return wasm.ready.then((wasm) => {
-    var stackAllocator = new wasm.StackAllocator(wasm.LibcAllocator)
-    var script = wasm.parseAst(stackAllocator.allocator, 'test.wast', text)
-    script.check()
-    var binaryOutput = script.toBinary({
+    const script = wasm.parseWast('test.wast', text)
+    return script.toBinary({
       log: log
     })
-    script.$destroy()
-    stackAllocator.$destroy()
-    return binaryOutput
   })
 }
