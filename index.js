@@ -1,4 +1,4 @@
-const wasm = require('./src/libwabt.js').wasm
+const libwabt = require('./src/libwabt.js')
 
 /**
  * Translates from [s-expressions](https://github.com/WebAssembly/spec) to the WebAssembly [binary-encoding](https://github.com/WebAssembly/design/blob/master/BinaryEncoding.md)
@@ -8,8 +8,10 @@ const wasm = require('./src/libwabt.js').wasm
  * for the compiled binary and `log` for the log
  */
 module.exports = (text, log = false) => {
-  return wasm.ready.then((wasm) => {
+  return libwabt.wasm.ready.then(wasm => {
     const script = wasm.parseWast('test.wast', text)
+    script.resolveNames()
+    script.validate()
     return script.toBinary({
       log: log
     })
