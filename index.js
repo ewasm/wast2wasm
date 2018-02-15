@@ -7,13 +7,16 @@ const libwabt = require('./src/libwabt.js')
  * @return {Promise} which resolves an object with the property `buffer` for
  * for the compiled binary and `log` for the log
  */
-module.exports = (text, log = false) => {
-  return libwabt.wasm.ready.then(wasm => {
-    const script = wasm.parseWast('test.wast', text)
-    script.resolveNames()
-    script.validate()
-    return script.toBinary({
-      log: log
+module.exports = (text, log = false, debug = false) => {
+  return libwabt.ready.then(() => {
+    const wabtModule = libwabt.parseWat('test.wast', text)
+    wabtModule.resolveNames()
+    wabtModule.validate()
+    const resultBuf = wabtModule.toBinary({
+      log: log,
+      write_debug_names: debug
     })
+    wabtModule.destroy()
+    return resultBuf
   })
 }
